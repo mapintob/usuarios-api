@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "9fbb3a49-dd45-4bc1-afb5-4f3f2d1e0147",
+		"name": "Usuarios-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5879151"
+	},
+	"item": [
+		{
+			"name": "Obtener Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/usuarios/"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuario por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/usuarios/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"maria\",\r\n        \"correo\": \"maria@gmail.com\",\r\n        \"clave\": \"micasa123\",\r\n        \"telefonos\": [\r\n            {\r\n                \"numero\": 52634189,\r\n                \"codigoCiudad\": 9,\r\n                \"codigoPais\": 56\r\n            },\r\n            {\r\n                \"numero\": 74851263,\r\n                \"codigoCiudad\": 9,\r\n                \"codigoPais\": 56\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/usuarios/"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"juan\",\r\n        \"correo\": \"juanito@gmail.com\",\r\n        \"clave\": \"123juan\",\r\n        \"telefonos\": [\r\n            {          \r\n                \"numero\": 74185263,\r\n                \"codigoCiudad\": 9,\r\n                \"codigoPais\": 56\r\n            }\r\n        ],\r\n        \"usuarioId\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/usuarios/"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Usuario por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"juanito\",\r\n        \"correo\": \"juan@gmail.com\",\r\n        \"password\": \"mipass23\",\r\n        \"telefonos\": [\r\n            {\r\n                \"numero\": 1111111,\r\n                \"codigoCiudad\": 57,\r\n                \"codigoPais\": 46\r\n            },\r\n            {\r\n                \"numero\": 2222222,\r\n                \"codigoCiudad\": 58,\r\n                \"codigoPais\": 56\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/usuarios/1"
+			},
+			"response": []
+		}
+	]
+}
